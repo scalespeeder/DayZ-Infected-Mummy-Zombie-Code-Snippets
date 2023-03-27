@@ -1,0 +1,52 @@
+DayZ Infected Mummy Code Snippets:
+
+
+Halloween Event:
+
+  <event name="InfectedReligious">
+        <nominal>50</nominal>
+        <min>25</min>
+        <max>100</max>
+        <lifetime>3</lifetime>
+        <restock>0</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>50</distanceradius>
+        <cleanupradius>100</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>player</position>
+        <limit>custom</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="3" lootmin="0" max="0" min="100" type="ZmbM_Mummy"/>
+        </children>
+    </event>
+	
+	
+	
+cfgspawnabletypes Snippet:4	
+	
+	
+	<type name="ZmbM_Mummy">
+		<cargo preset="ContaminatedCargo" />
+		<cargo chance="0.05">
+			<item name="AntiChemInjector" chance="1.0" />
+		</cargo>
+		<cargo chance="0.5">
+			<item name="HumanSteakMeat" chance="1.0" />
+		</cargo>
+		<cargo chance="0.5">
+			<item name="BandageDressing" chance="0.5" />
+			<item name="Rag" chance="0.5" />
+		</cargo>
+		<cargo chance="0.5">
+			<item name="IodineTincture" chance="0.33" />
+			<item name="Epinephrine" chance="0.33" />
+			<item name="Morphine" chance="0.33" />
+		</cargo>
+		<cargo chance="0.5">
+			<item name="CharcoalTablets" chance="0.25" />
+			<item name="PainkillerTablets" chance="0.25" />
+			<item name="TetracyclineAntibiotics" chance="0.25" />
+			<item name="VitaminBottle" chance="0.25" />
+		</cargo>
+	</type>
